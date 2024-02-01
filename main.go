@@ -1,8 +1,8 @@
 package main
 
 import (
+	"cashRegister/price"
 	"fmt"
-	"price"
 )
 
 func main() {
@@ -29,4 +29,9 @@ func main() {
 
 	total := price.TotalPrice(items)
 	fmt.Printf("Total price of the slice is: %f\n", total)
+
+	// Using the Describable interface
+	for _, item := range items {
+		fmt.Println(item.Description())
+	}
 }
