@@ -26,13 +26,13 @@ func main() {
 	items := []price.Item{item1, item2, item3}
 
 	// CalculatePrice, calculates the price and returns the price of the item
-	fmt.Printf("Price of the %s is: %f\n", item1.Name, price.CalculatePrice(item1))
-	fmt.Printf("Price of the %s is: %f\n", item2.Name, price.CalculatePrice(item2))
-	fmt.Printf("Price of the %s is: %f\n", item3.Name, price.CalculatePrice(item3))
+	fmt.Printf("Price of the %s is: %.2f\n", item1.Name, price.CalculatePrice(item1))
+	fmt.Printf("Price of the %s is: %.2f\n", item2.Name, price.CalculatePrice(item2))
+	fmt.Printf("Price of the %s is: %.2f\n", item3.Name, price.CalculatePrice(item3))
 
-	// TotalPrice, returns the sum of the values in an Item type slice
+	// TotalPrice, returns the sum of the prices in an Item type slice
 	total := price.TotalPrice(items)
-	fmt.Printf("Total price of the slice is: %f\n", total)
+	fmt.Printf("Total price of the slice is: %.2f\n", total)
 
 	// Using the Describable interface
 	for _, item := range items {
