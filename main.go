@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	var item1 price.Item
 	item1.Name = "Apple"
 	item1.Price = 5.0
@@ -21,12 +22,15 @@ func main() {
 	item3.Price = 9.0
 	item3.Discount = 0
 
+	// Item slice called items
 	items := []price.Item{item1, item2, item3}
 
+	// CalculatePrice, calculates the price and returns the price of the item
 	fmt.Printf("Price of the %s is: %f\n", item1.Name, price.CalculatePrice(item1))
 	fmt.Printf("Price of the %s is: %f\n", item2.Name, price.CalculatePrice(item2))
 	fmt.Printf("Price of the %s is: %f\n", item3.Name, price.CalculatePrice(item3))
 
+	// TotalPrice, returns the sum of the values in an Item type slice
 	total := price.TotalPrice(items)
 	fmt.Printf("Total price of the slice is: %f\n", total)
 

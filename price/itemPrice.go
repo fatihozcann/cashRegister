@@ -2,12 +2,14 @@ package price
 
 import "fmt"
 
+// Item type struct
 type Item struct {
 	Name     string
 	Price    float64
 	Discount int
 }
 
+// Returns the price with discount
 func CalculatePrice(item Item) float64 {
 	tmp := item.Price
 	if item.Discount > 0 {
@@ -17,6 +19,7 @@ func CalculatePrice(item Item) float64 {
 	return tmp
 }
 
+// Takes the sum of a given Item slice
 func TotalPrice(items []Item) float64 {
 	sum := 0.0
 	for i := range items {
